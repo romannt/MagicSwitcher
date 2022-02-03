@@ -56,49 +56,6 @@ namespace MagicSwitcher
             AddShortCut(Settings.ShortcutUkrainian, "Ukrainian");
             AddShortCut(Settings.ShortcutPolish, "Polish");
             AddShortCut(Settings.ShortcutNextLng, "Next");
-
-            /*
-            // Left Shift - pressed and released
-            KbdShortcut lShiftShortcut = new KbdShortcut("English");
-            lShiftShortcut.Add(new KbdEvent() { Key = Keys.LShiftKey, EventType = KbdEventType.KeyDown });
-            lShiftShortcut.Add(new KbdEvent() { Key = Keys.LShiftKey, EventType = KbdEventType.KeyUp });            
-            lShiftShortcut.Triggered += new KbdShortcut.KbdShortcutHandler(ShortcutHandler);
-            keyboardHook.AddShortсut(lShiftShortcut);
-            // System.Diagnostics.Debug.WriteLine(lShiftShortcut);
-
-            // Right Shift - pressed and released
-            KbdShortcut rShiftShortcut = new KbdShortcut("Russian");
-            rShiftShortcut.Add(new KbdEvent() { Key = Keys.RShiftKey, EventType = KbdEventType.KeyDown });
-            rShiftShortcut.Add(new KbdEvent() { Key = Keys.RShiftKey, EventType = KbdEventType.KeyUp });
-            rShiftShortcut.Triggered += new KbdShortcut.KbdShortcutHandler(ShortcutHandler);
-            keyboardHook.AddShortсut(rShiftShortcut);
-            // System.Diagnostics.Debug.WriteLine(rShiftShortcut);
-
-            // Left Ctrl - pressed and released
-            KbdShortcut lCtrlShortcut = new KbdShortcut("Ukrainian");
-            lCtrlShortcut.Add(new KbdEvent() { Key = Keys.LControlKey, EventType = KbdEventType.KeyDown });
-            lCtrlShortcut.Add(new KbdEvent() { Key = Keys.LControlKey, EventType = KbdEventType.KeyUp });
-            lCtrlShortcut.Triggered += new KbdShortcut.KbdShortcutHandler(ShortcutHandler);
-            keyboardHook.AddShortсut(lCtrlShortcut);
-            // System.Diagnostics.Debug.WriteLine(lCtrlShortcut);
-
-            // Right Ctrl - pressed and released
-            KbdShortcut rCtrlShortcut = new KbdShortcut("NextLanguage");
-            rCtrlShortcut.Add(new KbdEvent() { Key = Keys.RControlKey, EventType = KbdEventType.KeyDown });
-            rCtrlShortcut.Add(new KbdEvent() { Key = Keys.RControlKey, EventType = KbdEventType.KeyUp });
-            rCtrlShortcut.Triggered += new KbdShortcut.KbdShortcutHandler(ShortcutHandler);
-            keyboardHook.AddShortсut(rCtrlShortcut);
-            // System.Diagnostics.Debug.WriteLine(rCtrlShortcut);
-
-            // Left Alt + Left Shift - triggered when the last key is pressed in the sequence
-            KbdShortcut lAltLShiftShortcut = new KbdShortcut("LAlt+LShift");
-            lAltLShiftShortcut.Add(new KbdEvent() { Key = Keys.LMenu, EventType = KbdEventType.KeyDown });
-            lAltLShiftShortcut.Add(new KbdEvent() { Key = Keys.LShiftKey, EventType = KbdEventType.KeyDown });
-            // lAltLShiftShortcut.Pressed += new KbdShortcut.KbdShortcutHandler(ShortcutHandler);
-            lAltLShiftShortcut.Triggered += ShortcutHandler;
-            keyboardHook.AddShortсut(lAltLShiftShortcut);
-            // System.Diagnostics.Debug.WriteLine(lAltLShiftShortcut);
-            */
         }
 
         private static void AddShortCut(string shortcut, string shortcutAction)
@@ -132,7 +89,7 @@ namespace MagicSwitcher
         }
 
         /// <summary>
-        /// Handler for the keyboars shortcuts.
+        /// A handler for the keyboars shortcuts.
         /// </summary>
         /// <param name="name"></param>
         private static void ShortcutHandler(string name)
@@ -188,7 +145,7 @@ namespace MagicSwitcher
         }
 
         /// <summary>
-        /// Handler for the "About" button.
+        /// A handler for the "About" button.
         /// </summary>
         /// <param name="sender">Sender</param>
         /// <param name="e">Event argument</param>
@@ -216,7 +173,7 @@ namespace MagicSwitcher
         }
 
         /// <summary>
-        /// Handler for the "Settings..." button.
+        /// A handler for the "Settings..." menu item.
         /// </summary>
         /// <param name="sender">Sender</param>
         /// <param name="e">Event argument</param>
@@ -226,7 +183,7 @@ namespace MagicSwitcher
         }
 
         /// <summary>
-        /// Handler for the "Exit" button.
+        /// A handler for the "Exit" menu item.
         /// </summary>
         /// <param name="sender">Sender</param>
         /// <param name="e">Event argument</param>
