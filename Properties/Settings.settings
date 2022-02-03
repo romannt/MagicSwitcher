@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MagicSwitcher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ShortcutEnglish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LShiftKey</Value>
+    </Setting>
+    <Setting Name="ShortcutRussian" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RShiftKey</Value>
+    </Setting>
+    <Setting Name="ShortcutUkrainian" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LControlKey</Value>
+    </Setting>
+    <Setting Name="ShortcutNextLng" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RControlKey</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
