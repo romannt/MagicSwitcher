@@ -14,5 +14,8 @@
     <Setting Name="ShortcutNextLng" Type="System.String" Scope="User">
       <Value Profile="(Default)">RControlKey</Value>
     </Setting>
+    <Setting Name="ShortcutPolish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LAlt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

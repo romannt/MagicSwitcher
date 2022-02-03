@@ -70,5 +70,17 @@ namespace MagicSwitcher.Properties {
                 this["ShortcutNextLng"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("LAlt")]
+        public string ShortcutPolish {
+            get {
+                return ((string)(this["ShortcutPolish"]));
+            }
+            set {
+                this["ShortcutPolish"] = value;
+            }
+        }
     }
 }

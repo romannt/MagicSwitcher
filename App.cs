@@ -54,6 +54,7 @@ namespace MagicSwitcher
             AddShortCut(Settings.ShortcutEnglish, "English");
             AddShortCut(Settings.ShortcutRussian, "Russian");
             AddShortCut(Settings.ShortcutUkrainian, "Ukrainian");
+            AddShortCut(Settings.ShortcutPolish, "Polish");
             AddShortCut(Settings.ShortcutNextLng, "Next");
 
             /*
@@ -104,6 +105,15 @@ namespace MagicSwitcher
         {
             if (shortcut != "" && !string.Equals(shortcut, "Off", StringComparison.OrdinalIgnoreCase))
             {
+                if (shortcut.ToUpper() == "LALT")
+                {
+                    shortcut = "LMenu";
+                }
+                else if (shortcut.ToUpper() == "RALT")
+                {
+                    shortcut = "RMenu";
+                }
+
                 if (Enum.TryParse(shortcut, true, out Keys key))
                 {
                     InputSequence kbdShortcut = new InputSequence(shortcutAction);
@@ -140,6 +150,10 @@ namespace MagicSwitcher
                 case "Ukrainian":
                     System.Diagnostics.Debug.WriteLine("Ukrainian");
                     Layouts.ActivateLayout("uk-UA");
+                    break;
+                case "Polish":
+                    System.Diagnostics.Debug.WriteLine("Polish");
+                    Layouts.ActivateLayout("pl-PL");
                     break;
                 case "Next":
                     System.Diagnostics.Debug.WriteLine("Next language");

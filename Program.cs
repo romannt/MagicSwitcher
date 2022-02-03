@@ -1,6 +1,4 @@
-﻿//#define USE_UKR_LAYOUT
-
-using System;
+﻿using System;
 using System.Collections;
 using System.Configuration.Install;
 using System.Reflection;
@@ -79,17 +77,11 @@ namespace MagicSwitcher
             var description = assembly.GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false)[0] as AssemblyDescriptionAttribute;
             var copyright = assembly.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false)[0] as AssemblyCopyrightAttribute;
             var result = description.Description + Environment.NewLine +
-                "Left Shift - switch to english layout" + Environment.NewLine +
-                "Right Shift - switch to russian layout" + Environment.NewLine +
-#if (USE_UKR_LAYOUT)
-                "Left Ctrl - switch to ukrainian layout" + Environment.NewLine +
-#endif
-            "Right Ctrl - switch to next layout" + Environment.NewLine + Environment.NewLine +
-                copyright.Copyright + Environment.NewLine;
-            result += "Parameters: " + Environment.NewLine;
-            result += " /? or /help: Show the help" + Environment.NewLine;
-            result += " /install: install the program as a Windows Service" + Environment.NewLine;
-            result += " /uninstall: remove Magic Switcher from Windows Services" + Environment.NewLine;
+                copyright.Copyright + Environment.NewLine +
+                "Parameters: " + Environment.NewLine +
+                " /? or /help: Show the help" + Environment.NewLine +
+                " /install: install the program as a Windows Service" + Environment.NewLine +
+                " /uninstall: remove Magic Switcher from Windows Services" + Environment.NewLine;
             return result;
         }
 
